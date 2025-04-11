@@ -6,8 +6,10 @@
 		"defaultRequire": 1
 	},
 	"refmap": "mixins.disappear_hotbar.refmap.json",
+	"mixins": [
+		"GuiOverlayManagerMixin"
+	],
 	"client": [
-		"KeyboardHandlerMixin",
-		"VanillaGuiOverlayMixin"
+		"KeyboardHandlerMixin"
 	]
 }
