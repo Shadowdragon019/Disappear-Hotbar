@@ -12,11 +12,11 @@ import net.minecraftforge.fml.event.config.ModConfigEvent;
 import java.util.LinkedList;
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = De.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class DeConfig {
+@Mod.EventBusSubscriber(modid = Dh.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+public class DhConfig {
 	private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	private static final ForgeConfigSpec.ConfigValue<List<? extends String>> GUI_OVERLAYS_TO_NOT_RENDER_VALUE =
-		BUILDER.defineList("gui_overlays_to_not_render", new LinkedList<>(),
+		BUILDER.defineList("gui_overlays_to_not_render", new LinkedList<>(), // TODO: Set proper defaults
 			element -> element instanceof String string &&
 				GuiOverlayManager.findOverlay(ResourceLocation.parse(string)) != null);
 	public static final ForgeConfigSpec SPEC = BUILDER.build();
@@ -28,8 +28,8 @@ public class DeConfig {
 			GUI_OVERLAYS_TO_NOT_RENDER.clear();
 			for (var string : GUI_OVERLAYS_TO_NOT_RENDER_VALUE.get())
 				GUI_OVERLAYS_TO_NOT_RENDER.add(ResourceLocation.parse(string));
-			De.LOGGER.info("Disappear, Hotbar Options");
-			De.LOGGER.info(GuiOverlayManager.getOverlays().stream().map(NamedGuiOverlay::id).collect(ImmutableList.toImmutableList()).toString());
+			Dh.LOGGER.info("Disappear, Hotbar Options");
+			Dh.LOGGER.info(GuiOverlayManager.getOverlays().stream().map(NamedGuiOverlay::id).collect(ImmutableList.toImmutableList()).toString());
 		}
 	}
 }

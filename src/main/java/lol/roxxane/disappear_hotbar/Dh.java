@@ -6,14 +6,14 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-@Mod(De.ID)
-public class De {
+@Mod(Dh.ID)
+public class Dh {
     public static final String ID = "disappear_hotbar";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static F1State f1_state = F1State.SHOW_ALL;
 
-    public De(FMLJavaModLoadingContext context) {
-        context.registerConfig(ModConfig.Type.CLIENT, DeConfig.SPEC);
+    public Dh(FMLJavaModLoadingContext context) {
+        context.registerConfig(ModConfig.Type.CLIENT, DhConfig.SPEC);
     }
 
     public enum F1State {
