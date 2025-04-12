@@ -5,7 +5,7 @@
 	"injectors": {
 		"defaultRequire": 1
 	},
-	"refmap": "mixins.disappear_hotbar.refmap.json",
+	"refmap": "disappear_hotbar.refmap.mixins.json",
 	"mixins": [
 		"GuiOverlayManagerMixin"
 	],

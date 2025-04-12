@@ -155,8 +155,8 @@ dependencies {
 
 mixin {
     // MixinGradle Settings
-    add sourceSets.main, "mixins.${mod_id}.refmap.json"
-    config "mixins.${mod_id}.json"
+    add sourceSets.main, "${mod_id}.refmap.mixins.json"
+    config "${mod_id}.mixins.json"
 
     debug.verbose = true
     debug.export = true
@@ -191,7 +191,8 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_authors,
-                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs"            : "${mod_id}.mixins.json"
         ])
     }
 
