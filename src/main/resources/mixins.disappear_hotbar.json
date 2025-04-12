@@ -11,6 +11,5 @@
 	],
 	"client": [
 		"KeyboardHandlerMixin"
-	],
-	"minVersion": "0.8"
+	]
 }
